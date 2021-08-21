@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/side_nav_background"
+        tools:context=".view.chat.ChatActivity">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:background="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"/>
+
+                    <ImageView
+                            android:background="@drawable/background_toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp">
+
+                            <Button
+                                    android:id="@+id/btn_voltarChat"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:padding="8dp"
+                                    android:gravity="end"
+                                    android:background="@drawable/ic_back"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                                android:gravity="center"
+                                android:layout_weight="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="?attr/actionBarSize"
+                                android:text="Chat"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorLightGrey"/>
+
+                        <RelativeLayout
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp">
+
+                            <Button
+                                    android:id="@+id/btn_info"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:padding="8dp"
+                                    android:gravity="end"
+                                    android:background="@drawable/ic_info"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                                app:cardBackgroundColor="@color/main_blue_stroke_color"
+                                android:foreground="@drawable/icone"
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp">
+                        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                        <TextView
+                                android:id="@+id/txt_name_to_user"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nome Cliente"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorLightGrey"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="9"
+                    android:id="@+id/chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/common_google_signin_btn_text_dark_default"
+                    android:layout_width="350dp"
+                    android:layout_height="48dp">
+
+                <LinearLayout
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/round_et"
+                        android:orientation="horizontal"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:id="@+id/btn_sendPhoto"
+                            android:gravity="center"
+                            android:layout_margin="12dp"
+                            android:src="@drawable/ic_photo_camera"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"/>
+
+                    <EditText
+                            android:gravity="center"
+                            android:background="@android:color/transparent"
+                            android:cursorVisible="false"
+                            android:inputType="text"
+                            android:id="@+id/et_chat"
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:hint="Digitar mensagem..."
+                            android:textSize="15sp"/>
+
+
+                    <ImageView
+                            android:id="@+id/btn_sendChat"
+                            android:gravity="center"
+                            android:layout_margin="12dp"
+                            android:src="@drawable/ic_menu_send"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

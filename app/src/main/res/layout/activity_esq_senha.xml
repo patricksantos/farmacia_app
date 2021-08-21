@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.conta.EsqSenhaActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@color/backgroundApp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/informe_o_e_mail_cadastrado"
+                android:textSize="20sp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:gravity="end"
+        />
+
+        <EditText
+                style="@style/mCustromEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/categoria_button"
+                android:gravity="center"
+                android:hint="Email"
+                android:singleLine="true"
+                android:id="@+id/txt_recuperarEmail"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="20dp"
+        />
+
+        <Button
+                style="@style/mCustromEditText"
+                android:background="@drawable/round_btn"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textColor="@color/colorLightGrey"
+                android:text="Enviar Email de Recuperação"
+                android:textSize="12sp"
+                android:id="@+id/btn_recuperar"
+                android:layout_marginBottom="10dp"
+        />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

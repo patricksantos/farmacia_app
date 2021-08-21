@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundApp"
+        tools:context="livrokotlin.com.farmaciaesperanca.view.CompraFinalizadaActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                    android:background="@color/backgroundApp"
+                    android:id="@+id/delivery_latest"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="false"
+                    app:lottie_fileName="delivery_latest.json" />
+
+            <TextView
+                    android:text="Compra realizada com sucesso!"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="Obrigado por comprar conosco\nQualquer dúvida sobre a compra entre em contato pelo nosso Chat"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:text="Código do Pedido:"
+                        android:textColor="@color/sweet_dialog_bg_color_dark"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/codigo_produto"
+                        android:text="Text"
+                        android:textColor="@color/sweet_dialog_bg_color_dark"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/chat_pedido"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="250dp"
+                    android:layout_height="120dp">
+
+                <LinearLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_conversation"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                    <LinearLayout
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:layout_marginStart="10dp"
+                                android:text="chat"
+                                android:textStyle="italic"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="15dp"
+                                android:text="Tire sua duvida com um atendente"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="@color/colorLightRed"
+                    android:id="@+id/btn_pedido_home"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="40dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp">
+
+                <TextView
+                        android:text="Continuar Comprando"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

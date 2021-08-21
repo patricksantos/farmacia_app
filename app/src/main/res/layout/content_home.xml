@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/app_bar_home"
+        android:background="@android:color/transparent"
+        tools:context=".view.HomeActivity">
+
+    <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_marginBottom="55dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="320dp"
+                    android:layout_height="200dp">
+
+                <include
+                        android:id="@+id/llProgressBar"
+                        layout="@layout/progress_bar" />
+
+                <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="320dp"
+                        android:layout_height="200dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderCircularHandlerEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp">
+
+                    <AutoCompleteTextView
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:completionThreshold="1"
+                            android:completionHintView="@drawable/round_et"
+                            android:cursorVisible="false"
+                            android:inputType="text"
+                            android:id="@+id/et_buscador_global"
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:hint="Busque por produtos"
+                            android:textSize="12sp"/>
+
+                    <ImageView
+                            android:id="@+id/btn_searchGlobal"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_menu_search"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categorias"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:gravity="start"
+                        android:layout_weight="1"
+                        android:id="@+id/categorias"
+                />
+
+                <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver mais"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:gravity="end"
+                        android:id="@+id/btn_verMais"
+                />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                <LinearLayout
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="14dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            android:layout_margin="10dp"
+                            android:layout_width="80dp"
+                            android:layout_height="85dp">
+
+                        <androidx.cardview.widget.CardView
+                                android:id="@+id/btn_categoria_saude"
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                            <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp">
+
+                                <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_heart"
+                                />
+
+                                <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="20dp"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:text="Saúde"
+                                />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_categoria_infantil"
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="14dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            android:layout_margin="10dp"
+                            android:layout_width="80dp"
+                            android:layout_height="85dp">
+
+                        <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                            <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp">
+
+                                <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_baby"
+                                />
+
+                                <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="20dp"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:text="Infantil"
+                                />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_categoria_higiene"
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="14dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            android:layout_margin="14dp"
+                            android:layout_width="80dp"
+                            android:layout_height="85dp">
+
+                        <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                            <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp">
+
+                                <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_liquid_soap"
+                                />
+
+                                <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="20dp"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:text="Higiene"
+                                />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_categoria_beleza"
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="14dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            android:layout_margin="10dp"
+                            android:layout_width="80dp"
+                            android:layout_height="85dp">
+
+                        <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                            <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp">
+
+                                <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_lotion"
+                                />
+
+                                <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="20dp"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:text="Beleza"
+                                />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_categoria_verMais"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            android:layout_width="80dp"
+                            android:layout_height="85dp">
+
+                        <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="12dp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                            <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp">
+
+                                <ImageView
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="60dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_plus"
+                                />
+
+                                <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="20dp"
+                                        android:textColor="@color/colorPrimary"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textSize="15sp"
+                                        android:text="Ver Mais"
+                                />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/nossa_localizacao"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp">
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_google"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"/>
+
+                        <TextView
+                                android:layout_gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:text="gps"
+                                android:textStyle="italic"
+                                android:textSize="18sp"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:gravity="start"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="15dp"
+                                android:text="Localize a nossa loja física"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/chat_home"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp">
+
+                    <LinearLayout
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <ImageView
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/ic_conversation"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"/>
+
+                        <TextView
+                                android:layout_gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:text="chat"
+                                android:textStyle="italic"
+                                android:textSize="18sp"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:gravity="start"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="15dp"
+                                android:text="Tire sua duvida com um atendente"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <ImageView
+                    android:background="@drawable/round_et"
+                    android:src="@drawable/logo_farmacia2"
+                    android:padding="6dp"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

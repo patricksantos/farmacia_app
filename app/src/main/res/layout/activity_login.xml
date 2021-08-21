@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/telaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@color/backgroundApp">
+
+        <ImageView
+                android:layout_marginTop="25dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/logo_farmacia"
+                />
+
+        <EditText
+                style="@style/mCustromEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/categoria_button"
+                android:gravity="center"
+                android:hint="CPF"
+                android:singleLine="true"
+                android:id="@+id/txt_cpfLogin"
+                android:inputType="number"
+                />
+
+        <EditText
+                style="@style/mCustromEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/categoria_button"
+                android:gravity="center"
+                android:hint="Senha"
+                android:singleLine="true"
+                android:id="@+id/txt_senhaLogin"
+                android:inputType="textPassword"
+                android:layout_marginBottom="5dp"
+                />
+
+        <TextView
+                style="@style/mCustromEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esqueci minha senha"
+                android:textSize="15sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/esqueciSenha"
+                />
+
+        <Button
+                style="@style/mCustromEditText"
+                android:background="@drawable/round_btn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textColor="@color/colorLightGrey"
+                android:text="Fazer Login"
+                android:id="@+id/btn_entrar"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        <Button
+                style="@style/mCustromEditText"
+                android:background="@drawable/round_btn_secundario"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/colorLightGrey"
+                android:text="Criar nova Conta"
+                android:textSize="12sp"
+                android:id="@+id/criarConta"
+                />
+
+    </LinearLayout>
+
+    <include
+            android:id="@+id/llProgressBar"
+            android:visibility="gone"
+            layout="@layout/progress_bar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

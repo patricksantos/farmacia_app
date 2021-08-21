@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mk"
+        android:background="@color/backgroundApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.HomeActivity">
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:elevation="0dp"
+                tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="2"
+                            android:gravity="center">
+
+                        <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/logofarmacia" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                        <Button
+                                android:id="@+id/btn_compras"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/ic_shop"
+                                android:gravity="end"
+                                android:padding="8dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                        android:visibility="gone"
+                        android:clickable="false"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/badge"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textSize="10dp"
+                        app:nbMaxTextLength="2" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <include layout="@layout/background" />
+
+                <include layout="@layout/content_home" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/btn_botton_sheet"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:behavior_peekHeight="45dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="280dp" tools:ignore="MissingPrefix">
+
+        <androidx.cardview.widget.CardView
+                app:cardCornerRadius="66dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:paddingTop="13dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:id="@+id/btn_botton_sheet_upDown"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:id="@+id/btn_imagemPromo"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_up_arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                    <TextView
+                            android:layout_marginStart="10dp"
+                            android:text="Promoções"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#F6F5F1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:layout_gravity="center"
+                            android:dividerHeight="2dp"
+                            android:scrollbars="none"
+                            android:id="@+id/recyclerView_categoria_promocao"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

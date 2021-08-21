@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/enderecoUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundApp"
+        tools:context=".view.CadastroActivity">
+
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seu Endereço cadastrado:"
+                android:textSize="20sp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:gravity="start"
+        />
+
+        <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/meu_endereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereço"
+                android:textSize="18sp"
+                android:layout_marginBottom="35dp"
+                android:textStyle="bold"
+                android:gravity="end"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informe um novo Endereço"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:gravity="end"
+        />
+
+        <EditText
+                style="@style/mCustromEditText"
+                android:inputType="text"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txt_novo_endereco"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/categoria_button"
+                android:gravity="center"
+                android:hint="Novo endereço"
+                android:singleLine="true"
+        />
+
+        <Button
+                style="@style/mCustromEditText"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_btn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textColor="@color/colorLightGrey"
+                android:text="Alterar"
+                android:id="@+id/btn_alterar_endereco"
+                android:textColorHint="@android:color/background_dark"
+        />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

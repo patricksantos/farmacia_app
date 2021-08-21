@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home_meu_negocio"
+                android:icon="@drawable/ic_home"
+                android:title="App Cliente"/>
+        <item
+                android:id="@+id/nav_minha_conta_meu_negocio"
+                android:icon="@drawable/ic_user"
+                android:title="Minha Conta"/>
+        <item
+                android:id="@+id/nav_meus_pedidos_meu_negocio"
+                android:icon="@drawable/ic_lista"
+                android:title="Pedidos"/>
+        <item
+                android:id="@+id/nav_logout_meu_negocio"
+                android:icon="@drawable/ic_logout"
+                android:title="Sair"/>
+    </group>
+</menu>

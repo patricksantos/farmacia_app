@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/images_viewPager1"
+            android:layout_gravity="center_horizontal"
+            android:elevation="8dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"/>
+
+
+
+    <HorizontalScrollView
+            android:verticalScrollbarPosition="defaultPosition"
+            android:scrollbarSize="@dimen/activity_horizontal_margin"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:gravity="center|right"
+                    android:id="@+id/image_slide1"
+                    android:elevation="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/image_slide1"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="10dp"
+            />
+
+            <ImageView
+
+                    android:gravity="center|right"
+                    android:id="@+id/image_slide2"
+                    android:elevation="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/image_slide4"
+                    android:layout_margin="10dp"
+            />
+
+            <ImageView
+                    android:id="@+id/image_slide3"
+                    android:elevation="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/image_slide2"
+                    android:layout_margin="10dp"
+            />
+
+            <ImageView
+                    android:id="@+id/image_slide4"
+                    android:elevation="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/image_slide3"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="40dp"
+            />
+
+            <ImageView
+                    android:layout_marginTop="25dp"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/logo_farmacia"
+                    />
+
+            <ProgressBar
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:showDividers="end"
+                android:dividerPadding="@dimen/activity_vertical_margin"
+                android:divider="@color/backgroundApp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/btn_menos"
+                    android:background="@drawable/ic_minus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"/>
+
+            <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="@color/backgroundApp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp">
+
+                <TextView
+                        android:text="1"
+                        android:id="@+id/edt_quantidade_produto_detalhesProdutos"
+                        android:gravity="center"
+                        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                    android:id="@+id/btn_mais"
+                    android:background="@drawable/ic_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"/>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

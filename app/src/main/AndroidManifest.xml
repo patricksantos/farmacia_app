@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="livrokotlin.com.farmaciaesperanca">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+            android:name=".view.ChatApplication"
+            android:allowBackup="true"
+            android:fullBackupContent="@xml/my_backup_rules"
+            android:icon="@drawable/icone"
+            android:label="Farmácia Esperança"
+            android:roundIcon="@drawable/ic_icone"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="android:label">
+        <activity android:name=".view.conta.MeusPedidosActivity"
+                android:label="Meus Pedidos"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.ClienteDescricaoActivity"
+                android:label="Cliente"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.ClientesListActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.ClientesListActivity"
+                android:label="Meus Clientes"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.MeuNegocioActivity" />
+        </activity>
+        <activity
+                android:name=".view.CompraFinalizadaActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.PedidoDescricaoActivity"
+                android:label="Pedido"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.PedidosActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.PedidosActivity"
+                android:label="Lista Pedidos"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.MeuNegocioActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.SliderEditActivity"
+                android:label="Edição de Slider"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.MeuNegocioActivity" />
+        </activity>
+        <activity
+                android:name=".view.savvyGerenciador.MeuNegocioActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar.Savvy" />
+        <activity
+                android:name=".view.creditcard.NewCreditCardActivity"
+                android:label="Adicionar Cartão"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.creditcard.CreditCardActivity" />
+        </activity>
+        <activity
+                android:name=".view.creditcard.CreditCardActivity"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".util.ImageActivity"
+                android:label="Imagem">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.chat.ChatActivity" />
+        </activity>
+
+        <service
+                android:name=".view.chat.MyFirebaseMessagingService"
+                android:exported="false"
+                android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/icone" />
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorPrimary" />
+
+        <activity
+                android:name=".view.chat.ChatListActivity"
+                android:label="Conversas"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Blue">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.savvyGerenciador.MeuNegocioActivity" />
+        </activity>
+        <activity
+                android:name=".view.chat.ChatActivity"
+                android:label="Chat"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.conta.FormasPagamentoActivity"
+                android:label="Formas de Pagamento"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.FinalizarCompraActivity" />
+        </activity>
+        <activity
+                android:name=".view.FinalizarCompraActivity"
+                android:label="Meu Pedido"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.DetalhesProdutosActivity" />
+        </activity>
+        <activity
+                android:name=".view.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".view.conta.CestaComprasActivity"
+                android:label="Minha Cesta"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.categorias.CategoriasActivity" />
+        </activity>
+        <activity
+                android:name=".view.DetalhesProdutosActivity"
+                android:label="Detalhes do produto"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.categorias.CategoriasActivity" />
+        </activity>
+        <activity
+                android:name=".view.conta.EnderecoUsuarioActivity"
+                android:label="Meu Endereço"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.conta.MinhaContaActivity" />
+        </activity>
+        <activity
+                android:name=".view.conta.AlterarSenhaActivity"
+                android:label="Alterar Senha"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.conta.MinhaContaActivity" />
+        </activity>
+        <activity
+                android:name=".view.conta.MinhaContaActivity"
+                android:label="Minha Conta"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key" />
+
+        <activity
+                android:name=".view.MapsActivity"
+                android:label="Nossa Localização"
+                android:screenOrientation="portrait">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+
+        <activity
+                android:name=".view.VisitanteActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.LoginActivity" />
+        </activity>
+        <activity
+                android:name=".view.categorias.CategoriaBelezaActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.categorias.CategoriaHigieneActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.categorias.CategoriaInfantilActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.categorias.CategoriaSaudeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.categorias.CategoriasActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.HomeActivity" />
+        </activity>
+        <activity
+                android:name=".view.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.MainActivity" />
+        </activity>
+        <activity
+                android:name=".view.HomeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.MainActivity" />
+        </activity>
+        <activity
+                android:name=".view.conta.EsqSenhaActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.MainActivity" />
+        </activity>
+        <activity
+                android:name=".view.CadastroActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="livrokotlin.com.farmaciaesperanca.view.MainActivity" />
+        </activity>
+        <activity
+                android:name=".view.MainActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
